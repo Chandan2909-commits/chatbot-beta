@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropFirm Intelligent Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Animation Container -->
+    <div class="bg-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="16" fill="white" />
+                <path d="M16 8C11.5817 8 8 11.5817 8 16C8 20.4183 11.5817 24 16 24C20.4183 24 24 20.4183 24 16"
+                    stroke="black" stroke-width="3" stroke-linecap="round" />
+            </svg>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Challenges</a>
+            <a href="#">How it Works</a>
+            <a href="#">Payouts</a>
+            <a href="#">Trading Rules</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-pill">Client Area ↗</button>
+            <button class="btn-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+            </button>
+            <a href="#" class="create-account">Start Challenge</a>
+        </div>
+    </nav>
+
+    <!-- Main Hero Content -->
+    <main class="hero-section">
+        <!-- Floating decorative nodes -->
+        <div class="node node-left">
+            <div class="node-icon">💰</div>
+            <div class="node-label">Profit Split<br><span>Up to 90%</span></div>
+        </div>
+
+        <div class="node node-right">
+            <div class="node-icon">📈</div>
+            <div class="node-label">Scaling<br><span>$2M+ Plan</span></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="sparkle">✦</span> Get Funded up to $200,000 →
+            </div>
+
+            <h1 class="hero-title">Professional Funding for Serious Traders</h1>
+            <p class="hero-subtitle">Pass our evaluation, get funded, and keep the majority of your profits. No time
+                limits, raw spreads, and instant payouts.</p>
+
+            <div class="hero-buttons">
+                <button class="btn-primary">Get Funded ↗</button>
+                <button class="btn-secondary">View Rules</button>
+            </div>
+        </div>
+
+        <div class="hero-footer">
+            <div class="scroll-indicator">
+                <div class="arrow-down">↓</div>
+                Scroll to explore rules
+            </div>
+            <div class="hero-stats">
+                <span>Total Payouts</span>
+                <div class="stat-bars">
+                    <div class="bar active"></div>
+                    <div class="bar active"></div>
+                    <div class="bar"></div>
+                </div>
+                <span style="font-size: 0.8rem; margin-left: 8px;">$15M+ Paid</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chat Widget -->
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-info">
+                <h1>PropFirm Assistant</h1>
+                <span class="status-dot"></span>
+                <span class="status-text">Online</span>
+            </div>
+            <div class="header-actions" style="display: flex; gap: 8px;">
+                <button id="header-reset-btn" class="header-btn" aria-label="Start New Chat" title="Start New Chat">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 12C4 16.4183 7.58172 20 12 20C14.1502 20 16.1022 19.1517 17.5678 17.75"
+                            stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M20 12C20 7.58172 16.4183 4 12 4C9.84982 4 7.89777 4.84826 6.43224 6.25" stroke="#666"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M20 12V8" stroke="#666" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M4 12V16" stroke="#666" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button id="header-close-btn" class="header-btn" aria-label="Close Chat" title="Close Chat">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="#666" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M6 6L18 18" stroke="#666" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="chat-messages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    Hello! I'm your PropFirm Intelligent Assistant. I can explain our rules, challenges, risk limits,
+                    payouts, and operational policies. How can I help you today?
+                </div>
+                <div class="message-time">Just now</div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" placeholder="Type your question..." aria-label="Type your question">
+            <button class="send-btn" aria-label="Send">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Launcher Button -->
+    <button id="chat-launcher" class="chat-launcher" aria-label="Open Chat">
+        <div class="launcher-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M21 11.5C21.0039 12.8199 20.6957 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0039 9.87812 19.6957 8.7 19.1L3 21L4.9 15.3C4.30426 14.1219 3.99604 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30429 11.1801 2.99607 12.5 3H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="close-icon" style="display: none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </button>
+    <script src="dataset.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
